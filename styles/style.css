@@ -66,12 +66,14 @@ nav {
     align-items: center;
 }
 
+
 nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
 
 }
+
 
 nav ul li a {
     padding: 0.10em 0.33em 0.10em 0.33em;
@@ -114,6 +116,28 @@ body.homepagina main p:first-of-type, p:nth-of-type(2) {
 body.homepagina main > p:first-of-type {
     margin-top: 2em;
 }
+
+/* css animatie introductie */
+
+@keyframes scale{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+body.homepagina main > p:first-of-type:hover {
+    animation-name: scale;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+  }
+  
 
 body.homepagina main img:nth-of-type(2) {
     width: 25em;
