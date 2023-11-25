@@ -225,7 +225,37 @@ body.pagina3 main div {
     gap: 5em;
 }
 
+/* Keyframe animatie pagina 3 */
 
+@keyframes draai {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body.pagina3 main div img {
+    animation: draai 1s;
+}
+
+body.pagina3 main div:first-of-type img {
+    animation-delay: 1s;
+}
+
+body.pagina3 main div:nth-of-type(2) img {
+    animation-delay: 1.5s;
+}
+
+body.pagina3 main div:nth-of-type(3) img {
+    animation-delay: 2s;
+}
+
+body.pagina3 main div:nth-of-type(4) img {
+    animation-delay: 2.5s;
+}
 
 /* Pagina 4 */
 
