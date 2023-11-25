@@ -1,22 +1,23 @@
-
 /* Fonts */
 
 @font-face {
-    font-family: 'Futura-light' ;
+    font-family: 'Futura-light';
     src: url('../fonts/futura\ light\ bt.ttf')
 }
+
 @font-face {
-    font-family: 'Futura-extra-black' ;
+    font-family: 'Futura-extra-black';
     src: url('../fonts/Futura\ Extra\ Black\ font.ttf')
 }
+
 @font-face {
-    font-family: 'Futura-regular' ;
+    font-family: 'Futura-regular';
     src: url('../fonts/Futura\ Book\ font.ttf')
 }
 
 /* Algemene css */
 
-*{
+* {
     padding: 0em;
     margin: 0em;
 }
@@ -26,7 +27,8 @@ main {
     margin: auto;
 }
 
-p, figcaption {
+p,
+figcaption {
     font-family: Futura-regular;
 
 }
@@ -40,10 +42,25 @@ h1 {
     justify-content: center;
 }
 
+header h1 {
+
+    font-family: Futura-regular;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
 h2 {
     font-family: Futura-extra-black;
     font-size: 1.5em;
 }
+
+footer h2 {
+    font-family: Futura-regular;
+    font-size: 1em;
+}
+
 
 a {
     font-family: Futura-light;
@@ -91,7 +108,7 @@ nav ul li a:hover {
 }
 
 /* Main */
-    /* Homepagina */
+/* Homepagina */
 
 body.homepagina header nav ul li:first-of-type {
     text-decoration: underline;
@@ -109,39 +126,19 @@ body.homepagina main p:first-of-type strong {
     font-size: 1.2em;
 }
 
-body.homepagina main p:first-of-type, p:nth-of-type(2) {
+body.homepagina main p:first-of-type,
+p:nth-of-type(2) {
     text-align: center;
 }
 
-body.homepagina main > p:first-of-type {
+body.homepagina main>p:first-of-type {
     margin-top: 2em;
 }
 
-/* css animatie introductie */
-
-@keyframes scale{
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1);
-    }
-  }
-
-body.homepagina main > p:first-of-type:hover {
-    animation-name: scale;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-delay: .5s;
-  }
-  
 
 body.homepagina main img:nth-of-type(2) {
     width: 25em;
-    height: 25em;
+    height: auto;
 }
 
 body.homepagina main div:first-of-type {
@@ -155,7 +152,7 @@ body.homepagina main div:nth-of-type(2) {
     flex-direction: row;
     gap: 2em;
     margin-top: 2em;
-    
+
 }
 
 body.homepagina main div:first-of-type p {
@@ -166,7 +163,7 @@ body.homepagina main div:nth-of-type(2) p {
     text-align: left;
 }
 
-    /* Pagina 2 */
+/* Pagina 2 */
 
 body.pagina2 header nav ul li:nth-of-type(2) {
     text-decoration: underline;
@@ -185,28 +182,30 @@ body.pagina2 main section:first-of-type {
 
 }
 
-body.pagina2 main div img {
+body.pagina2 main div:first-of-type img {
     width: 60em;
 }
 
-body.pagina2 main figure:first-of-type img {
-    width: 60em;
+body.pagina2 main div:first-of-type img {
+    width: 100%;
+    max-width: 60em;
+    height: auto;
 }
 
-body.pagina2 main figure:nth-of-type(2) {
+body.pagina2 main div:nth-of-type(2) {
     display: flex;
     flex-direction: row;
     gap: 2em;
 }
 
-body.pagina2 main figure:nth-of-type(3) {
+body.pagina2 main div:nth-of-type(3) {
     display: flex;
     flex-direction: row-reverse;
     gap: 2em;
 }
 
 
-    /* Pagina 3 */
+/* Pagina 3 */
 
 body.pagina3 header nav ul li:nth-of-type(3) {
     text-decoration: underline;
@@ -220,7 +219,7 @@ body.pagina3 main {
     margin-bottom: 4em;
 }
 
-body.pagina3 main figure {
+body.pagina3 main div {
     display: flex;
     flex-direction: row;
     gap: 5em;
@@ -228,7 +227,7 @@ body.pagina3 main figure {
 
 
 
-    /* Pagina 4 */
+/* Pagina 4 */
 
 
 
@@ -244,7 +243,7 @@ body.pagina4 main {
     margin-bottom: 4em;
 }
 
-body.pagina4 main > section {
+body.pagina4 main>section {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -252,7 +251,7 @@ body.pagina4 main > section {
 }
 
 
-body.pagina4 figure {
+body.pagina4 div {
     width: 25em;
     margin-bottom: 5em;
 }
@@ -261,23 +260,23 @@ body.pagina4 h1 {
     width: 100%;
 }
 
-body.pagina4 figure img {
+body.pagina4 div img {
     height: 25em;
     width: 25em;
 }
 
-body.pagina4 figure figcaption {
+body.pagina4 div p {
     width: 25em;
     margin-top: 1em;
 }
 
-body.pagina4 section figure:nth-of-type(2) a {
+body.pagina4 section div:nth-of-type(2) a {
     font-weight: bold;
     text-decoration: none;
     color: darkblue;
 }
 
-body.pagina4 section figure:nth-of-type(2) a:hover {
+body.pagina4 section div:nth-of-type(2) a:hover {
     text-decoration: underline;
 }
 
@@ -285,12 +284,12 @@ body.pagina4 section figure:nth-of-type(2) a:hover {
 /* Footer */
 
 footer {
-    background-color:brown ;
+    background-color: brown;
     padding: 1em 0em 1em 0em;
     color: white;
 }
 
-footer > * {
+footer>* {
     max-width: 60em;
     margin: auto;
 }
@@ -310,5 +309,83 @@ footer ul li a {
 
 
 footer ul li a:hover {
-text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1053px) {
+
+    body.homepagina main {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    body.homepagina main h1 {
+        text-align: center;
+    }
+
+    body.homepagina main div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    body.pagina2 main h1 {
+        text-align: center;
+    }
+
+    body.pagina2 main {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    body.pagina2 main div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    body.pagina2 main div:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    body.pagina3 main div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    body.pagina3 main h1 {
+        text-align: center;
+    }
+
+
+    body.pagina4 main h1 {
+        text-align: center;
+    }
+
+    body.pagina4 main>section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    body footer ul li a {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    body footer h2 {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }
