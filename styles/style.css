@@ -170,7 +170,7 @@ body.pagina2 header nav ul li:nth-of-type(2) {
     text-decoration-thickness: 0.1em;
 }
 
-body.pagina2 main {
+body.pagina2 main section {
     display: flex;
     flex-direction: column;
     margin-bottom: 4em;
@@ -178,7 +178,8 @@ body.pagina2 main {
 }
 
 body.pagina2 main section:first-of-type {
-    text-align: center;
+    text-align: left;
+
 
 }
 
@@ -212,7 +213,7 @@ body.pagina3 header nav ul li:nth-of-type(3) {
     text-decoration-thickness: 0.1em;
 }
 
-body.pagina3 main {
+body.pagina3 main section {
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -222,18 +223,25 @@ body.pagina3 main {
 body.pagina3 main div {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 5em;
 }
 
 /* Keyframe animatie pagina 3 */
 
 @keyframes draai {
-    from {
+    0% {
         transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
     }
 
-    to {
+    5% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
         transform: rotate(360deg);
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
     }
 }
 
@@ -266,7 +274,7 @@ body.pagina4 header nav ul li:nth-of-type(4) {
     text-decoration-thickness: 0.1em;
 }
 
-body.pagina4 main {
+body.pagina4 main section {
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -281,16 +289,16 @@ body.pagina4 main>section {
 }
 
 
-body.pagina4 div {
+body.pagina4 section div {
     width: 25em;
     margin-bottom: 5em;
 }
 
-body.pagina4 h1 {
+body.pagina4 main h1 {
     width: 100%;
 }
 
-body.pagina4 div img {
+body.pagina4 section div img {
     height: 25em;
     width: 25em;
 }
@@ -298,6 +306,7 @@ body.pagina4 div img {
 body.pagina4 div p {
     width: 25em;
     margin-top: 1em;
+
 }
 
 body.pagina4 section div:nth-of-type(2) a {
