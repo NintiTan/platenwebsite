@@ -37,12 +37,11 @@ h1 {
     font-family: Futura-extra-black;
     font-size: 2em;
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
     display: flex;
     justify-content: center;
 }
 
-header h1 {
+header h2 {
 
     font-family: Futura-regular;
     font-size: 1em;
@@ -118,7 +117,12 @@ body.homepagina header nav ul li:first-of-type {
 body.homepagina main {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2em;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+}
+
+body.homepagina main h1 {
+    margin-bottom: 1.5em;
 }
 
 body.homepagina main p:first-of-type strong {
@@ -126,10 +130,6 @@ body.homepagina main p:first-of-type strong {
     font-size: 1.2em;
 }
 
-body.homepagina main p:first-of-type,
-p:nth-of-type(2) {
-    text-align: center;
-}
 
 body.homepagina main>p:first-of-type {
     margin-top: 2em;
@@ -141,27 +141,21 @@ body.homepagina main img:nth-of-type(2) {
     height: auto;
 }
 
-body.homepagina main div:first-of-type {
+body.homepagina main > p {
+    width: 30em;
+}
+
+body.homepagina main section {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    margin-bottom: 2em;
 }
 
-body.homepagina main div:nth-of-type(2) {
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-    margin-top: 2em;
 
-}
-
-body.homepagina main div:first-of-type p {
+body.homepagina main section p {
     text-align: left;
 }
 
-body.homepagina main div:nth-of-type(2) p {
-    text-align: left;
-}
 
 /* Pagina 2 */
 
@@ -170,40 +164,49 @@ body.pagina2 header nav ul li:nth-of-type(2) {
     text-decoration-thickness: 0.1em;
 }
 
-body.pagina2 main section {
+body.pagina2 main {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4em;
-    gap: 2em;
+    gap: 3em;
+    margin-bottom: 3em;
 }
 
 body.pagina2 main section:first-of-type {
-    text-align: left;
-
-
+    display: flex;
+    flex-direction: column;
 }
 
-body.pagina2 main div:first-of-type img {
+body.pagina2 main section:first-of-type img {
     width: 60em;
 }
 
-body.pagina2 main div:first-of-type img {
-    width: 100%;
-    max-width: 60em;
-    height: auto;
+body.pagina2 main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
 }
 
-body.pagina2 main div:nth-of-type(2) {
+body.pagina2 main ul section {
+    display: flex;
+    flex-direction: column;
+}
+
+body.pagina2 main ul li:first-of-type {
     display: flex;
     flex-direction: row;
     gap: 2em;
 }
 
-body.pagina2 main div:nth-of-type(3) {
+body.pagina2 main ul li:nth-of-type(2) {
     display: flex;
     flex-direction: row-reverse;
     gap: 2em;
+
 }
+
+
+
+
 
 
 /* Pagina 3 */
@@ -213,18 +216,37 @@ body.pagina3 header nav ul li:nth-of-type(3) {
     text-decoration-thickness: 0.1em;
 }
 
-body.pagina3 main section {
+body.pagina3 main {
     display: flex;
     flex-direction: column;
     gap: 2em;
     margin-bottom: 4em;
 }
 
-body.pagina3 main div {
+body.pagina3 ol {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
+body.pagina3 li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5em;
+    justify-content: space-between;
+}
+
+body.pagina3 main section {
+    display: flex;
+    flex-direction: column;
+}
+
+body.pagina3 section p {
+    width: 30em;
+}
+
+body.pagina3 main h1 {
+    margin-bottom: 1.5em;
 }
 
 /* Keyframe animatie pagina 3 */
@@ -245,23 +267,23 @@ body.pagina3 main div {
     }
 }
 
-body.pagina3 main div img {
+body.pagina3 main li img {
     animation: draai 1s;
 }
 
-body.pagina3 main div:first-of-type img {
+body.pagina3 main li:first-of-type img {
     animation-delay: 1s;
 }
 
-body.pagina3 main div:nth-of-type(2) img {
+body.pagina3 main li:nth-of-type(2) img {
     animation-delay: 1.5s;
 }
 
-body.pagina3 main div:nth-of-type(3) img {
+body.pagina3 main li:nth-of-type(3) img {
     animation-delay: 2s;
 }
 
-body.pagina3 main div:nth-of-type(4) img {
+body.pagina3 main li:nth-of-type(4) img {
     animation-delay: 2.5s;
 }
 
@@ -274,11 +296,27 @@ body.pagina4 header nav ul li:nth-of-type(4) {
     text-decoration-thickness: 0.1em;
 }
 
-body.pagina4 main section {
+body.pagina4 main {
     display: flex;
-    flex-direction: column;
-    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body.pagina4 main section {
+    gap: 1.5em;
     margin-bottom: 4em;
+}
+
+body.pagina4 section img {
+    order: 1;
+}
+
+body.pagina4 section h2 {
+    order: 2;
+}
+
+body.pagina4 section p {
+    order: 3;
 }
 
 body.pagina4 main>section {
@@ -288,34 +326,28 @@ body.pagina4 main>section {
     justify-content: space-between;
 }
 
-
-body.pagina4 section div {
+body.pagina4 section{
     width: 25em;
-    margin-bottom: 5em;
 }
 
 body.pagina4 main h1 {
     width: 100%;
+    margin-bottom: 1.5em;
 }
 
-body.pagina4 section div img {
+body.pagina4 section img {
     height: 25em;
     width: 25em;
 }
 
-body.pagina4 div p {
-    width: 25em;
-    margin-top: 1em;
 
-}
-
-body.pagina4 section div:nth-of-type(2) a {
+body.pagina4 section:nth-of-type(2) a {
     font-weight: bold;
     text-decoration: none;
     color: darkblue;
 }
 
-body.pagina4 section div:nth-of-type(2) a:hover {
+body.pagina4 section:nth-of-type(2) a:hover {
     text-decoration: underline;
 }
 
@@ -353,7 +385,7 @@ footer ul li a:hover {
 
 /* Media queries */
 
-@media screen and (max-width: 1053px) {
+@media screen and (max-width: 65.8125em) {
 
     body.homepagina main {
         margin-left: 5em;
@@ -380,19 +412,19 @@ footer ul li a:hover {
         margin-right: 5em;
     }
 
-    body.pagina2 main div:nth-of-type(2) {
+    body.pagina2 main ul li:first-of-type {
         display: flex;
         flex-direction: column;
         gap: 2em;
     }
 
-    body.pagina2 main div:nth-of-type(3) {
+    body.pagina2 main ul li:nth-of-type(2) {
         display: flex;
         flex-direction: column;
         gap: 2em;
     }
 
-    body.pagina3 main div {
+    body.pagina3 main ol li {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -415,7 +447,6 @@ footer ul li a:hover {
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
-        margin: auto;
     }
 
     body footer ul li a {
